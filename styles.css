@@ -1,0 +1,119 @@
+:root {
+    --color: rgb(80, 78, 78);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Menu styles*/
+
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 0.4rem;
+    position: relative;
+}
+.menu-icon--wrapper {
+    position: relative;
+}
+.menu-icon--circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgray;
+    border-radius: 50%;
+    opacity: 0;
+    width: 3rem;
+    height: 3rem;
+}
+
+.menu-icon:hover .menu-icon--circle {
+    opacity: 0.5;
+}
+
+.menu-icon:hover {
+    opacity: 0.8;
+    background-color: lightgray;
+}
+
+.menu-icon-line {
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: var(--color);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* header styles */
+
+header {
+    display: flex;
+    align-items: center;
+    margin: 2rem 2rem;
+    color: var(--color);
+}
+
+/* text styles */
+
+h1 {
+    margin: 0;
+}
+
+h3, h1, .menu-icon {
+    color: var(--color);
+}
+
+
+/* Mail list styles */
+
+  .icons {
+    padding-right: 1rem;
+    font-size: 1.5rem;
+}
+
+  .icons-position:hover {
+    background-color: lightgray;
+    flex-grow: 1;
+    flex-basis: 0;
+    width: 50vh;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+}
+
+  .icons-position {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.icon {
+    padding: 0 1.5rem;
+    font-size: 2.8rem;
+
+}
+
+.icons-position--highlighted {
+    padding: 1rem 0;
+    background-color: rgb(195, 247, 247);
+    width: 25vh;
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.icons-position--highlighted:hover {
+    box-shadow: 1px 3px 3px 2px  rgba(199,201,193,1);
+    cursor: pointer;
+    transition: 0.2s;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Css BEM and WEB components</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="JavaScript.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="menu-icon">
+              <div class="menu-icon--wrapper">
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon--circle"></div>
+              </div>
+            </div>
+            
+            <span class="icon" aria-hidden="true">📬</span>
+            <h1>Mail App</h1>
+        </header>
+
+          <div class="icons-position--highlighted">
+            <span class="icons" aria-hidden="true">🖊️</span>
+            <h3>Compose</h3>
+          </div>
+          
+          <!-- custom element -->
+
+          <app-sidebar-button text="Inbox" unreadcount="1">
+            <slot slot="icon">📥</slot>
+          </app-sidebar-button>
+
+          <app-sidebar-button text="Starred" unreadcount="1">
+            <slot slot="icon">⭐️</slot>
+          </app-sidebar-button>
+
+          <app-sidebar-button text="Snoozed" unreadcount="1">
+            <slot slot="icon">⏱</slot>
+          </app-sidebar-button>
+
+          <app-sidebar-button text="Sent" unreadcount="1">
+            <slot slot="icon">➡️</slot>
+          </app-sidebar-button>
+
+          <app-sidebar-button text="Draft" unreadcount="1">
+            <slot slot="icon">📄</slot>
+          </app-sidebar-button>
+
+          <!-- Template -->
+
+          <template id = 'Mailbutton'>
+
+            <div class="icons-position">
+              <span class="icons" aria-hidden="true"><slot name="icon">📥</slot></span>
+              <h3></h3>
+            </div>
+
+          </template>
+    </body>
+</html>
